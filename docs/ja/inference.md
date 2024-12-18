@@ -24,7 +24,7 @@ huggingface-cli download fishaudio/fish-speech-1.5 --local-dir checkpoints/fish-
     モデルにランダムに音声の音色を選ばせる場合、このステップをスキップできます。
 
 ```bash
-python tools/vqgan/inference.py \
+python tools/vqgan/inference.sh \
     -i "paimon.wav" \
     --checkpoint-path "checkpoints/fish-speech-1.5/firefly-gan-vq-fsq-8x1024-21hz-generator.pth"
 ```
@@ -57,7 +57,7 @@ python tools/llama/generate.py \
 #### VQGAN デコーダー
 
 ```bash
-python tools/vqgan/inference.py \
+python tools/vqgan/inference.sh \
     -i "codes_0.npy" \
     --checkpoint-path "checkpoints/fish-speech-1.5/firefly-gan-vq-fsq-8x1024-21hz-generator.pth"
 ```

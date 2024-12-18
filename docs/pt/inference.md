@@ -24,7 +24,7 @@ huggingface-cli download fishaudio/fish-speech-1.5 --local-dir checkpoints/fish-
     Se quiser permitir que o modelo escolha aleatoriamente um timbre de voz, pule esta etapa.
 
 ```bash
-python tools/vqgan/inference.py \
+python tools/vqgan/inference.sh \
     -i "paimon.wav" \
     --checkpoint-path "checkpoints/fish-speech-1.5/firefly-gan-vq-fsq-8x1024-21hz-generator.pth"
 ```
@@ -57,7 +57,7 @@ Este comando criará um arquivo `codes_N` no diretório de trabalho, onde N é u
 #### Decodificador VQGAN
 
 ```bash
-python tools/vqgan/inference.py \
+python tools/vqgan/inference.sh \
     -i "codes_0.npy" \
     --checkpoint-path "checkpoints/fish-speech-1.5/firefly-gan-vq-fsq-8x1024-21hz-generator.pth"
 ```
